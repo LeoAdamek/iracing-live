@@ -7,8 +7,11 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class PlayerPosition extends Vue {
-  get pos (): number {
-    return this.$store.state.telemetry.PlayerCarPosition.INT
+  get pos (): number | string {
+    const pos = this.$store.state.telemetry.PlayerCarPosition.INT
+
+    if (pos === 0) return '--'
+    return pos
   }
 }
 </script>

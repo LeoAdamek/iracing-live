@@ -1,5 +1,5 @@
 <template>
-    <h2>RPM: {{rpm}}</h2>
+    <h2>RPM: {{rpm | round}}</h2>
 </template>
 
 <script lang="ts">
